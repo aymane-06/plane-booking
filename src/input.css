@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: Trade Gothic LT Std;
+    src: url(../assets/font/TradeGothicLTStd-Bold.otf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../assets/font/Montserrat-VariableFont_wght.ttf);
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
