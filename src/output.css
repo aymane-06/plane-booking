@@ -574,8 +574,8 @@ video {
   top: -0.375rem;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.bottom-\[-40px\] {
+  bottom: -40px;
 }
 
 .left-0 {
@@ -586,6 +586,18 @@ video {
   right: 0.625rem;
 }
 
+.right-\[103px\] {
+  right: 103px;
+}
+
+.right-\[200px\] {
+  right: 200px;
+}
+
+.right-\[70px\] {
+  right: 70px;
+}
+
 .top-2\.5 {
   top: 0.625rem;
 }
@@ -594,20 +606,20 @@ video {
   top: 0.75rem;
 }
 
-.bottom-\[\] {
-  bottom: ;
+.top-\[200px\] {
+  top: 200px;
 }
 
-.bottom-\[-\] {
-  bottom: -;
+.top-\[80px\] {
+  top: 80px;
 }
 
-.bottom-\[-20px\] {
-  bottom: -20px;
+.right-\[125px\] {
+  right: 125px;
 }
 
-.bottom-\[-40px\] {
-  bottom: -40px;
+.right-\[100px\] {
+  right: 100px;
 }
 
 .-z-10 {
@@ -618,24 +630,20 @@ video {
   z-index: 0;
 }
 
-.m-\[\] {
-  margin: ;
-}
-
-.m-\[20px\] {
-  margin: 20px;
-}
-
-.m-\[1\] {
-  margin: 1;
+.z-\[-999\] {
+  z-index: -999;
 }
 
 .m-\[10px\] {
   margin: 10px;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
+.m-\[20px\] {
+  margin: 20px;
+}
+
+.m-\[60px\] {
+  margin: 60px;
 }
 
 .mb-2 {
@@ -644,6 +652,10 @@ video {
 
 .mb-3 {
   margin-bottom: 0.75rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -658,6 +670,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -666,12 +682,16 @@ video {
   height: 1.25rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .h-\[100dvh\] {
   height: 100dvh;
 }
 
-.h-\[100px\] {
-  height: 100px;
+.h-\[300px\] {
+  height: 300px;
 }
 
 .h-\[30px\] {
@@ -686,16 +706,8 @@ video {
   height: 100%;
 }
 
-.h-96 {
-  height: 24rem;
-}
-
-.h-\[300px\] {
-  height: 300px;
-}
-
-.w-1\/4 {
-  width: 25%;
+.w-2\/5 {
+  width: 40%;
 }
 
 .w-4\/5 {
@@ -706,28 +718,29 @@ video {
   width: 1.25rem;
 }
 
+.w-\[100dvw\] {
+  width: 100dvw;
+}
+
+.w-\[108px\] {
+  width: 108px;
+}
+
 .w-\[120px\] {
   width: 120px;
+}
+
+.w-\[fit-content\] {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .w-full {
   width: 100%;
 }
 
-.w-\[\] {
-  width: ;
-}
-
-.w-\[100px\] {
-  width: 100px;
-}
-
-.w-\[200px\] {
-  width: 200px;
-}
-
-.w-\[300px\] {
-  width: 300px;
+.w-\[311px\] {
+  width: 311px;
 }
 
 .min-w-\[200px\] {
@@ -777,10 +790,6 @@ video {
   align-items: center;
 }
 
-.items-baseline {
-  align-items: baseline;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -801,10 +810,6 @@ video {
   gap: 0.5rem;
 }
 
-.gap-\[\] {
-  gap: ;
-}
-
 .gap-\[10px\] {
   gap: 10px;
 }
@@ -813,12 +818,12 @@ video {
   gap: 30px;
 }
 
-.gap-\[50px\] {
-  gap: 50px;
+.gap-\[35px\] {
+  gap: 35px;
 }
 
-.gap-\[20px\] {
-  gap: 20px;
+.gap-\[50px\] {
+  gap: 50px;
 }
 
 .self-start {
@@ -837,6 +842,10 @@ video {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
 }
 
 .rounded {
@@ -868,18 +877,23 @@ video {
   border-bottom-width: 2px;
 }
 
-.border-gray-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
-}
-
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
 .border-t-transparent {
   border-top-color: transparent;
+}
+
+.bg-\[\#8DD3BB\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(141 211 187 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#8dd3bb\] {
@@ -901,15 +915,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\] {
-  background-color: ;
-}
-
-.bg-\[\#8DD3BB\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(141 211 187 / var(--tw-bg-opacity));
-}
-
 .bg-hero {
   background-image: url('../assets/image/Frame 36.svg');
 }
@@ -927,20 +932,12 @@ video {
      object-fit: cover;
 }
 
-.p-\[5px\] {
-  padding: 5px;
-}
-
 .p-4 {
   padding: 1rem;
 }
 
-.p-\[\] {
-  padding: ;
-}
-
-.p-\[50px\] {
-  padding: 50px;
+.p-\[5px\] {
+  padding: 5px;
 }
 
 .px-0 {
@@ -958,12 +955,12 @@ video {
   padding-bottom: 0.625rem;
 }
 
-.pt-\[50px\] {
-  padding-top: 50px;
-}
-
 .pt-\[80px\] {
   padding-top: 80px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .font-TradeGothic {
@@ -976,6 +973,11 @@ video {
 
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-\[10ch\] {
@@ -995,34 +997,39 @@ video {
   line-height: 1.25rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.font-bold {
+  font-weight: 700;
 }
 
 .font-normal {
   font-weight: 400;
 }
 
-.font-bold {
-  font-weight: 700;
+.leading-normal {
+  line-height: 1.5;
 }
 
 .leading-tight {
   line-height: 1.25;
 }
 
-.leading-normal {
-  line-height: 1.5;
-}
-
 .tracking-tight {
   letter-spacing: -0.025em;
+}
+
+.text-\[\#FF8682\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 134 130 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .text-gray-900 {
@@ -1038,24 +1045,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.text-\[\] {
-  color: ;
-}
-
-.text-\[\#\] {
-  color: #;
-}
-
-.text-\[\#FF8682\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 134 130 / var(--tw-text-opacity));
 }
 
 .shadow {
@@ -1098,7 +1087,47 @@ video {
   src: url(../assets/font/Montserrat-VariableFont_wght.ttf);
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+.checkbox input{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox input::after,
+.checkbox input::before,
+.checkbox input{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: white;
+}
+
+.checkbox input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  height: 25px;
+}
+
+.checkbox input:checked{
+  background: green;
+}
+
+.checkbox input:disabled{
+  background: red;
+  pointer-events: none;
+}
+
+#green input{
+  background: green;
+  pointer-events: none;
+}
 
 .before\:pointer-events-none::before {
   content: var(--tw-content);
@@ -1421,10 +1450,6 @@ video {
     width: 12rem;
   }
 
-  .md\:max-w-xl {
-    max-width: 36rem;
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1489,3 +1514,4 @@ video {
     color: rgb(59 130 246 / var(--tw-text-opacity));
   }
 }
+

@@ -9,4 +9,40 @@
     font-family: Montserrat;
     src: url(../assets/font/Montserrat-VariableFont_wght.ttf);
 }
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+.checkbox input{
+    appearance: none;
+    padding: 0;
+    margin: 0;
+   outline: none;
+   cursor: pointer;
+}
+.checkbox input::after,
+.checkbox input::before,
+.checkbox input{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background: white;
+    
+}
+.checkbox input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    height: 25px;
+
+}
+.checkbox input:checked{
+    background: green;
+}
+.checkbox input:disabled{
+    background: red;
+    pointer-events: none;
+}
+#green input{
+    background: green;
+    pointer-events: none;
+}
+
