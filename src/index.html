@@ -14,7 +14,7 @@
     <title>Document</title>
   </head>
   <body class="flex flex-col items-center">
-    <nav class="h-[30px] flex justify-center fixed bg-white w-full">
+    <nav class="h-[30px] flex justify-center fixed bg-white w-full  top-[0px] ">
       <div>
         <h1><i class="fa-solid fa-plane-departure"></i>Find Flight</h1>
         <div class="w-[120px] bg-black h-[5px]"></div>
@@ -22,7 +22,7 @@
     </nav>
     <section
       id="lainding"
-      class="bg-hero h-[100dvh] bg-cover bg-no-repeat flex justify-center flex-col"
+      class="bg-hero h-[100dvh] bg-cover bg-no-repeat flex justify-center flex-col "
     >
       <h1 class="font-TradeGothic text-[10ch] text-white">
         Make your travel whishlist, we’ll do the rest
@@ -33,7 +33,7 @@
     </section>
     <section
       id="selectFlight"
-      class="gap-2 flex flex-col items-center w-4/5 rounded absolute bg-white bottom-[-40px] [box-shadow:0px_10px_10px_0px_black]"
+      class="gap-2 flex flex-col items-center w-4/5 rounded relative bg-white  [box-shadow:0px_10px_10px_0px_black] top-[-37px]"
     >
       <h1 class="self-start m-[10px]">Where are you flying?</h1>
       <div class="w-full flex justify-around">
@@ -92,7 +92,7 @@
         <!-- dateinput -->
         <div class="relative h-10 min-w-[200px]">
           <input
-            id="date-picker"
+            id="date_picker"
             class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
             placeholder=" "
             type="date"
@@ -104,12 +104,12 @@
           </label>
         </div>
       </div>
-      <button
+      <a href="#displayed_teckits" class="self-end"><button
         onclick="showFlight()"
         class="bg-[#8dd3bb] rounded font-button p-[5px] self-end m-[20px]"
       >
         <i class="fa-solid fa-paper-plane"></i>Show Filghts
-      </button>
+      </button></a>
     </section>
     <!-- tikets -->
     <section
@@ -212,10 +212,10 @@
     <!-- seetReservation -->
     <section
       id="seetReservation"
-      class="h-[100dvh] m-[60px] relative w-[100dvw] flex"
+      class="h-[100dvh] m-[60px] relative w-[100dvw] flex hidden"
     >
     <!-- planeseets -->
-    <div id="planeseets" class="relative w-2/4" >
+    <div id="planeseets" class="relative w-2/4 " >
         <h1  class="absolute left-[61px] top-[-20px] font-TradeGothic text-[30px] bg-white w-[300px]">Select your place:</h1>
     <div id="desc" class="absolute right-[100px] top-[80px] flex justify-around w-[311px] gap-30px ">
         <label for="checkbox" id="green" class="checkbox flex flex-col items-center">
@@ -788,8 +788,11 @@
     <div>
     <h1 class="font-TradeGothic">TOTAL PRICE: <span id="finalPrice"></span></h1>
 </div>
-<button class="bg-green-700" ><i class="fa-solid fa-cart-shopping"></i>Buy Tickets</button>
+<button class="bg-green-700" onclick="showTickets()" ><i class="fa-solid fa-cart-shopping"></i>Buy Tickets</button>
 </div>
+    </section>
+    <section id="Tickets" class="h-[100dvh] relative w-[100dvw] hidden grid-cols-[repeat(auto-fit,minmax(340px,1fr))] ">
+        
     </section>
     <script src="script.js"></script>
   </body>
