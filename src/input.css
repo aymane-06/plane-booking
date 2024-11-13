@@ -69,6 +69,7 @@
     text-align: center;
     color: #1c1c1c;
     /* display: grid; */
+    margin-top: 30px;
     justify-content: center;
   }
   
@@ -225,6 +226,17 @@
     }
     100% {
       transform: translateY(0);
+    }
+  }
+
+
+  .result{
+    /* position: relative; */
+    width: 100%;
+    text-align: center;
+    &&:hover{
+      background-color: gray;
+      cursor: pointer;
     }
   }
 

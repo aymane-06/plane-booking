@@ -17,7 +17,14 @@ function showFlight(){
      tdepart=departeinp;
      tarrivé=arrivéeinp;
      Tdate=Dateinp;
-    if(departeinp&&arrivéeinp){
+      let currentDate= new Date();
+      console.log(currentDate);
+      let picedDate=new Date(Tdate);
+      console.log(picedDate);
+      let DateValidation=(picedDate-currentDate)/(1000*60*60*24)+1;
+      console.log(DateValidation);
+      
+    if(departeinp&&arrivée&&departeinp!=arrivéeinp&& DateValidation>0){
     display.classList.add('grid');
     display.classList.remove('hidden');
     for(let i=0;i<4;i++){
@@ -25,6 +32,7 @@ function showFlight(){
     arrivée[i].textContent=`${arrivéeinp}`;
 }   
 }
+
 }
 ticketsResrv();
 function ticketsResrv(){
@@ -63,6 +71,11 @@ function ticketsNum(){
         finalP=(CNum*50)+(ANum*104);
         finalPrice.textContent=`${finalP}$`;
         placeNumber=ANum+CNum;
+        if(placeNumber==0){
+         for(let i=0;i<checkboxes.length;i++){
+    checkboxes[i].setAttribute('disabled', true);
+}  
+        }
         checkbox();
         
 
@@ -79,6 +92,11 @@ function ticketsNum(){
         finalPrice.textContent=`${finalP}$`;
         placeNumber=ANum+CNum;
         checkbox();
+        if(placeNumber==0){
+         for(let i=0;i<checkboxes.length;i++){
+    checkboxes[i].setAttribute('disabled', true);
+}  
+}
         for(let i=0;i<checkboxes.length;i++){
             checkboxes[i].checked = false;
         }
@@ -91,6 +109,11 @@ function ticketsNum(){
         finalPrice.textContent=`${finalP}$`;
         placeNumber=ANum+CNum;
         checkbox();
+        if(placeNumber==0){
+         for(let i=0;i<checkboxes.length;i++){
+    checkboxes[i].setAttribute('disabled', true);
+}  
+}  
         
 
     })
@@ -105,6 +128,11 @@ function ticketsNum(){
         finalPrice.textContent=`${finalP}$`;
         placeNumber=ANum+CNum; 
         checkbox();
+        if(placeNumber==0){
+         for(let i=0;i<checkboxes.length;i++){
+    checkboxes[i].setAttribute('disabled', true);
+}  
+}    
         for(let i=0;i<checkboxes.length;i++){
             checkboxes[i].checked = false;
         }
@@ -128,12 +156,12 @@ function checkbox() {
       checkbox.addEventListener('change', () => {
         countChecked = checkboxes.filter(checkbox => checkbox.checked).length;
         checkedindex=[];
-for(let i=0;i<checkboxes.length;i++){ 
-if(checkboxes[i].checked){
+      for(let i=0;i<checkboxes.length;i++){ 
+         if(checkboxes[i].checked){
     
     checkedindex.push(i);
-}
-}
+      }
+      }
   
         checkboxes.forEach(checkbox => {
           if (placeNumber > countChecked) {
@@ -295,6 +323,94 @@ QRCode.toDataURL(seet[i].textContent).then(dataUrl =>{
     QRImg[i].src=dataUrl;
 })
 }
-$('#Tickets').printThis();
+
+setTimeout(()=>{ window.print()},3000);
 
 }
+
+
+
+let citiesNAme=[];
+const getData = async () =>{
+   await  fetch('./data.json')
+   .then(res =>res.json())
+   .then(data =>{
+     // console.log(data)
+     // citiesNAme = data[0]
+      for(let i=0;i<data.length;i++){
+          for(let j=0;j<data[i].cities.length;j++){
+              // console.log(data[i].cities[j].name);
+              citiesNAme.push(data[i].cities[j].name)
+          }
+      }
+   console.log('hna f fetch');
+
+  })  ;
+  console.log('salat  f fetch');
+
+  let inputBox1=document.getElementById('floating_email1');
+  let inputBox2=document.getElementById('floating_email2');
+   let result=[];
+   let Fresult
+   const resultDiv=document.getElementById('result_div')
+   const resultDiv2=document.getElementById('result_div2')
+   inputBox1.addEventListener('keyup',()=>{
+      // const resultDiv=document.getElementById('result_div')
+      resultDiv.innerHTML='';
+      
+   let input=inputBox1.value;
+   if(input.length){
+      result=citiesNAme.filter((keyword)=>{
+        return keyword.toLowerCase().includes(input.toLowerCase())
+      })
+      Fresult=[... new Set(result)];
+      Fresult.forEach(res =>{
+         
+         const resulta=document.createElement('h1');
+         resulta.classList.add('result');
+         resulta.textContent=res;
+         resultDiv.appendChild(resulta);
+         resulta.addEventListener('click',()=>{
+            inputBox1.value=resulta.textContent;
+            resultDiv.innerHTML='';
+         })
+      })
+   }
+   if(input.length==0){
+      const resultDiv=document.getElementById('result_div')
+      resultDiv.innerHTML='';
+   }
+})
+
+inputBox2.addEventListener('keyup',()=>{
+   // const resultDiv=document.getElementById('result_div')
+   resultDiv2.innerHTML='';
+   
+let input2=inputBox2.value;
+if(input2.length){
+   result=citiesNAme.filter((keyword)=>{
+     return keyword.toLowerCase().includes(input2.toLowerCase())
+   })
+   Fresult=[... new Set(result)];
+   Fresult.forEach(res =>{
+      
+      const resulta=document.createElement('h1');
+      resulta.classList.add('result');
+      resulta.textContent=res;
+      resultDiv2.appendChild(resulta);
+      resulta.addEventListener('click',()=>{
+         inputBox2.value=resulta.textContent;
+         resultDiv2.innerHTML='';
+      })
+   })
+}
+if(input.length==0){
+   const resultDiv=document.getElementById('result_div')
+   resultDiv.innerHTML='';
+}
+})
+
+}
+getData();
+
+   
