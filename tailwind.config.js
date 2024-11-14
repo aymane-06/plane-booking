@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        'hero':"url('../assets/image/Frame 36.svg')",
+        'hero':"url('./assets/image/Frame 36.svg')",
         
       },
       fontFamily:{
