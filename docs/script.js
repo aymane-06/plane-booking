@@ -180,16 +180,18 @@ function showTickets(){
     const tickets=document.getElementById('Tickets');
     const Tnameinp=document.getElementById('floating_first_name').value;
     const TlastNameinp=document.getElementById('floating_last_name').value;
-    
-
+    const email=document.getElementById('floating_email').value
+        
+console.log(checkboxes.length);
 tname=Tnameinp;
 TlastName=TlastNameinp;
+if(Tnameinp&&TlastNameinp&&email&&checkedindex.length!=0){
     plane.classList.remove('flex');
     plane.classList.add('hidden');
     tickets.classList.remove('hidden');
     tickets.classList.add('grid');
 
-
+   
 for(let i=0;i<ANum;i++){
     const ticket=document.createElement('div');
     ticket.classList.add('ticket-system');
@@ -326,6 +328,7 @@ QRCode.toDataURL(seet[i].textContent).then(dataUrl =>{
 
 setTimeout(()=>{ window.print()},3000);
 
+}
 }
 
 
